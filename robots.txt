@@ -36,3 +36,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# 5) خريطة الموقع
+Sitemap: https://mohammed74a.github.io/aeo-test-site/sitemap.xml

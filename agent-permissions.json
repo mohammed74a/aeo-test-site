@@ -1,0 +1,16 @@
+{
+  "site": "https://mohammed74a.github.io/aeo-test-site/",
+  "version": "1.0",
+  "last_updated": "2026-09-18",
+  "contact": "owner@example.com",
+  "permissions": {
+    "read": true,
+    "index": true,
+    "cite": true,
+    "train": true,
+    "execute": false,
+    "transact": false
+  },
+  "preferred_entrypoint": "/llms.txt",
+  "notes": "Static demo site. No interactive tasks available."
+}

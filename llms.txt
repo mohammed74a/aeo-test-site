@@ -4,14 +4,14 @@
 
 ## Key Pages
 
-- [الرئيسية](/index.html): الصفحة الرئيسية — نظرة عامة على الموقع التجريبي وملفات AEO
-- [عن الموقع](/about.html): وصف المشروع التجريبي وأهدافه
-- [الأسئلة الشائعة](/faq.html): أسئلة وأجوبة عن AEO وllms.txt وروبوتات الذكاء الاصطناعي
+- [الرئيسية](https://mohammed74a.github.io/aeo-test-site/index.html): الصفحة الرئيسية — نظرة عامة على الموقع التجريبي وملفات AEO
+- [عن الموقع](https://mohammed74a.github.io/aeo-test-site/about.html): وصف المشروع التجريبي وأهدافه
+- [الأسئلة الشائعة](https://mohammed74a.github.io/aeo-test-site/faq.html): أسئلة وأجوبة عن AEO وllms.txt وروبوتات الذكاء الاصطناعي
 
 ## Content by Topic
 
 ### تحسين محركات الذكاء الاصطناعي (AEO)
-- [ما هو AEO؟](/faq.html): تعريف AEO وأهميته — ~50 توكن
-- [ما هو ملف llms.txt؟](/faq.html): شرح ملف llms.txt وأصله — ~50 توكن
-- [روبوتات الذكاء الاصطناعي](/faq.html): GPTBot وClaudeBot وPerplexityBot — ~50 توكن
-- [قابلية القراءة الآلية](/faq.html): لماذا HTML النظيف أفضل من JavaScript — ~50 توكن
+- [ما هو AEO؟](https://mohammed74a.github.io/aeo-test-site/faq.html#aeo): تعريف AEO وأهميته — ~50 توكن
+- [ما هو ملف llms.txt؟](https://mohammed74a.github.io/aeo-test-site/faq.html#llms): شرح ملف llms.txt وأصله — ~50 توكن
+- [روبوتات الذكاء الاصطناعي](https://mohammed74a.github.io/aeo-test-site/faq.html#bots): GPTBot وClaudeBot وPerplexityBot — ~50 توكن
+- [قابلية القراءة الآلية](https://mohammed74a.github.io/aeo-test-site/faq.html#readability): لماذا HTML النظيف أفضل من JavaScript — ~50 توكن
