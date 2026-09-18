@@ -1,0 +1,38 @@
+# AI Crawler Access Policy — آخر تحديث: 2026-09-18
+
+# 1) روبوتات البحث والاستشهاد — سماح (تقود الاستشهادات)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# 2) روبوتات التدريب — قرار المالك (سماح)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 3) زواحف غير مرغوبة — حجب
+User-agent: Bytespider
+Disallow: /
+
+# 4) محركات البحث التقليدية
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
