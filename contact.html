@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="style.css">
   <link rel="mcp-actions" href="mcp-actions.json">
 
+  <!-- أنماط حالة النموذج (Formspree Ajax — تُظهر/تُخفي عبر data-fs-active) -->
+  <style>
+    [data-fs-success] { display:none; }
+    [data-fs-success][data-fs-active] { display:block; }
+    [data-fs-error] { display:none; }
+    [data-fs-error][data-fs-active] { display:block; }
+    [data-fs-field][aria-invalid="true"] { border-color:#dc3455; }
+    [data-fs-error="name"], [data-fs-error="email"], [data-fs-error="message"] { color:#dc3455; font-size:0.85rem; }
+  </style>
+
   <!-- Schema: ContactPage + WebForm + ContactPoint -->
   <script type="application/ld+json">
   {
@@ -35,11 +45,11 @@
       "@type": "Organization",
       "name": "AEO Lab",
       "url": "https://mohammed74a.github.io/aeo-test-site/",
-      "email": "contact@example.com",
+      "email": "chewy-unicorn06@bravealias.com",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "contact@example.com",
+        "email": "chewy-unicorn06@bravealias.com",
         "url": "https://mohammed74a.github.io/aeo-test-site/contact.html",
         "availableLanguage": ["ar", "en"]
       }
@@ -106,13 +116,25 @@
         data-mcp-params       = JSON بالحقول المطلوبة والاختيارية
         على كل حقل: data-mcp-param + data-mcp-description
 
-        🔧 خطوة إنتاجية قبل الاعتماد: أنشئ حساباً على https://formspree.io
-        واستبدل YOUR_FORM_ID بمعرّف النموذج الحقيقي (المسار: https://formspree.io/f/YOUR_FORM_ID).
-        بدون ذلك يبقى النموذج مكتشفاً للوكلاء لكن الإرسال لن يصل لبريد.
+        Formspree حقيقي: https://formspree.io/f/maennwlp
+        ترقية تدريجية (progressive enhancement):
+        1) action + method="POST" = إرسال أصلي (Basic HTML) — يعمل بدون JS وللوكلاء
+        2) @formspree/ajax عبر CDN = تجربة Ajax (رسائل نجاح/خطأ دون إعادة تحميل)
       -->
+      <div
+        data-fs-success
+        role="status"
+        style="padding:0.8rem; margin-bottom:1rem; border-radius:6px; background:#d4edda; color:#155724;"
+      >✅ تم إرسال رسالتك بنجاح — سنرد عليك قريباً.</div>
+      <div
+        data-fs-error
+        role="alert"
+        style="padding:0.8rem; margin-bottom:1rem; border-radius:6px; background:#f8d7da; color:#721c24;"
+      >⚠ تعذر إرسال الرسالة. تحقق من الحقول وحاول مجدداً.</div>
+
       <form
         id="contact-form"
-        action="https://formspree.io/f/YOUR_FORM_ID"
+        action="https://formspree.io/f/maennwlp"
         method="POST"
         accept-charset="UTF-8"
         data-mcp-action="send-contact-message"
@@ -127,11 +149,13 @@
             name="name"
             autocomplete="name"
             required
+            data-fs-field
             data-mcp-param="name"
             data-mcp-description="الاسم الكامل للشخص المرسل"
             aria-required="true"
             style="width:100%; padding:0.6rem; margin-top:0.3rem;"
           >
+          <span data-fs-error="name"></span>
         </div>
 
         <div style="margin-bottom:1rem;">
@@ -143,11 +167,13 @@
             autocomplete="email"
             inputmode="email"
             required
+            data-fs-field
             data-mcp-param="email"
             data-mcp-description="البريد الإلكتروني للرد على الرسالة"
             aria-required="true"
             style="width:100%; padding:0.6rem; margin-top:0.3rem;"
           >
+          <span data-fs-error="email"></span>
         </div>
 
         <div style="margin-bottom:1rem;">
@@ -184,14 +210,16 @@
             name="message"
             rows="5"
             required
+            data-fs-field
             data-mcp-param="message"
             data-mcp-description="نص الرسالة: وصف المشروع أو السؤال أو الاقتراح أو الملاحظة"
             aria-required="true"
             style="width:100%; padding:0.6rem; margin-top:0.3rem;"
           ></textarea>
+          <span data-fs-error="message"></span>
         </div>
 
-        <button id="send-contact-message" type="submit" style="padding:0.6rem 1.4rem; cursor:pointer;">إرسال الرسالة</button>
+        <button id="send-contact-message" type="submit" data-fs-submit-btn style="padding:0.6rem 1.4rem; cursor:pointer;">إرسال الرسالة</button>
       </form>
     </div>
 
@@ -227,6 +255,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- Formspree Ajax (@formspree/ajax عبر CDN — بدون bundler، يبقي WebMCP intact) -->
+  <script>
+    window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
+
+    formspree('initForm', {
+      formElement: '#contact-form',
+      formId: 'maennwlp'
+    });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>

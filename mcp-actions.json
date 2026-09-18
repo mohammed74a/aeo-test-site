@@ -9,7 +9,7 @@
       "name": "إرسال رسالة تواصل",
       "description": "إرسال رسالة تواصل إلى فريق AEO Lab. الحقول: الاسم والبريد الإلكتروني والرسالة.",
       "method": "declarative",
-      "endpoint": "https://formspree.io/f/YOUR_FORM_ID",
+      "endpoint": "https://formspree.io/f/maennwlp",
       "page": "/contact.html",
       "parameters": {
         "required": ["name", "email", "message"],
@@ -29,5 +29,5 @@
       }
     }
   ],
-  "notes": "الوضع declarative هو الأساس. استبدل YOUR_FORM_ID بمعرّف Formspree حقيقي قبل الاعتماد الإنتاجي. الوضع imperative (navigator.mcpActions) غير مفعّل حالياً — متاح في متصفحات Chrome/Edge 2026+."
+  "notes": "الوضع declarative هو الأساس. النموذج مربوط بـ Formspree الحقيقي (f/maennwlp) — يمكن للوكلاء إكمال إرسال الرسالة عبر action الأصلي أو عبر تجربة Ajax المحسّنة. الوضع imperative (navigator.mcpActions) غير مفعّل حالياً — متاح في متصفحات Chrome/Edge 2026+."
 }

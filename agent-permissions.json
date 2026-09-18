@@ -2,7 +2,7 @@
   "site": "https://mohammed74a.github.io/aeo-test-site/",
   "version": "2.0",
   "last_updated": "2026-09-18",
-  "contact": "contact@example.com",
+  "contact": "chewy-unicorn06@bravealias.com",
   "permissions": {
     "read": true,
     "index": true,
@@ -18,7 +18,7 @@
       "method": "declarative",
       "requires_auth": false,
       "page": "/contact.html",
-      "endpoint": "https://formspree.io/f/YOUR_FORM_ID"
+      "endpoint": "https://formspree.io/f/maennwlp"
     },
     {
       "id": "suggest-improvement",
@@ -30,5 +30,5 @@
     }
   ],
   "preferred_entrypoint": "/llms.txt",
-  "notes": "الموقع يدعم الآن إنجاز مهام محدودة: إرسال رسالة تواصل (بدون مصادقة) واقتراح تحسين (عبر GitHub). لا توجد معاملات مالية. استبدل contact@example.com ببريد حقيقي عند توفره، و YOUR_FORM_ID بمعرّف Formspree حقيقي."
+  "notes": "الموقع يدعم الآن إنجاز مهام محدودة: إرسال رسالة تواصل (بدون مصادقة) واقتراح تحسين (عبر GitHub). لا توجد معاملات مالية. النموذج مربوط بـ Formspree (f/maennwlp) والبريد chewy-unicorn06@bravealias.com."
 }
