@@ -1,0 +1,241 @@
+/* ===== AEO Test Site — التصميم الموحد ===== */
+:root {
+  --primary: #0f3460;
+  --primary-light: #16213e;
+  --accent: #e94560;
+  --accent-2: #533483;
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --text-light: #666;
+  --border: #e9ecef;
+  --success: #28a745;
+  --warning: #ffc107;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ===== التنقل ===== */
+.navbar {
+  background: var(--primary-light);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.navbar .logo span { color: var(--accent); }
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+}
+.nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+.nav-links a.active { color: var(--accent); font-weight: 600; }
+
+/* ===== الحاوية ===== */
+.container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+main { padding: 2.5rem 0; min-height: 60vh; }
+
+/* ===== البطل (Hero) ===== */
+.hero {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 50%, var(--accent-2) 100%);
+  color: white;
+  padding: 4rem 0;
+  border-radius: 0 0 24px 24px;
+  text-align: center;
+}
+.hero h1 { font-size: 2.4rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.15rem; opacity: 0.9; max-width: 650px; margin: 0 auto 1.5rem; }
+.hero .badges { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+.badge {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+}
+
+/* ===== البطاقات ===== */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  margin: 1.2rem 0;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.card h2 { color: var(--primary); margin-bottom: 0.8rem; font-size: 1.35rem; }
+.card h3 { color: var(--primary); margin: 1rem 0 0.5rem; }
+
+/* ===== الشبكات ===== */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+
+/* ===== القوائم ===== */
+ul, ol { padding-right: 1.5rem; margin: 0.5rem 0; }
+li { margin: 0.35rem 0; }
+
+/* ===== الأزرار ===== */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover { opacity: 0.9; transform: translateY(-2px); }
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+.btn-outline:hover { background: var(--accent); color: white; }
+
+/* ===== FAQ (بدون JavaScript) ===== */
+details.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0.8rem 0;
+  padding: 1rem 1.4rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+details.faq-item:hover { box-shadow: var(--shadow-hover); }
+details.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.05rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+details.faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+details.faq-item[open] summary::after { transform: rotate(45deg); }
+details.faq-item .answer { padding-top: 0.8rem; color: var(--text); }
+
+/* ===== المقالات ===== */
+.article-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin: 0.5rem 0 1rem;
+  flex-wrap: wrap;
+}
+.article-meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+.tag {
+  background: #e8f0fe;
+  color: var(--primary);
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ===== الجدول ===== */
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+th, td { padding: 0.7rem 1rem; text-align: right; border-bottom: 1px solid var(--border); }
+th { background: var(--primary-light); color: white; font-weight: 600; }
+tr:nth-child(even) { background: #f8f9fa; }
+
+/* ===== الكود ===== */
+code {
+  background: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  direction: ltr;
+  display: inline-block;
+}
+pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+  margin: 1rem 0;
+}
+pre code { background: transparent; color: inherit; padding: 0; }
+
+/* ===== التذييل ===== */
+footer {
+  background: var(--primary-light);
+  color: #aaa;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+footer a { color: #ccc; text-decoration: none; }
+footer a:hover { color: white; }
+
+/* ===== صفحة 404 ===== */
+.error-page { text-align: center; padding: 5rem 1rem; }
+.error-page h1 { font-size: 6rem; color: var(--accent); }
+.error-page p { font-size: 1.2rem; margin: 1rem 0 2rem; }
+
+/* ===== الاستجابة ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.8rem; }
+  .navbar .container { flex-direction: column; }
+  .nav-links { justify-content: center; }
+  main { padding: 1.5rem 0; }
+}

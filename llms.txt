@@ -1,17 +1,25 @@
-# موقع تجريبي لاختبار AEO
+# AEO Lab — موقع AEO التجريبي
 
-> موقع تجريبي أُنشئ بتاريخ 2026-09-18 لاختبار تحسين محركات الذكاء الاصطناعي (AEO): قابلية الاكتشاف والقراءة الآلية لروبوتات الذكاء الاصطناعي.
+> موقع تجريبي متكامل لاختبار تحسين محركات الذكاء الاصطناعي (AEO): llms.txt، robots.txt، Schema، قابلية القراءة الآلية، وميزانية التوكنات. باللغة العربية.
 
 ## Key Pages
-
-- [الرئيسية](https://mohammed74a.github.io/aeo-test-site/index.html): الصفحة الرئيسية — نظرة عامة على الموقع التجريبي وملفات AEO
-- [عن الموقع](https://mohammed74a.github.io/aeo-test-site/about.html): وصف المشروع التجريبي وأهدافه
-- [الأسئلة الشائعة](https://mohammed74a.github.io/aeo-test-site/faq.html): أسئلة وأجوبة عن AEO وllms.txt وروبوتات الذكاء الاصطناعي
+- [الرئيسية](https://mohammed74a.github.io/aeo-test-site/): نظرة عامة على الموقع ومميزاته وإحصائياته
+- [المدونة](https://mohammed74a.github.io/aeo-test-site/blog.html): مقالات عن تحسين محركات الذكاء الاصطناعي
+- [الأسئلة الشائعة](https://mohammed74a.github.io/aeo-test-site/faq.html): 6 أسئلة شائعة عن AEO وllms.txt وSchema
+- [عن الموقع](https://mohammed74a.github.io/aeo-test-site/about.html): أهداف الموقع وبنيته وملفات AEO
+- [تواصل](https://mohammed74a.github.io/aeo-test-site/contact.html): قنوات التواصل والمستودع
 
 ## Content by Topic
 
-### تحسين محركات الذكاء الاصطناعي (AEO)
-- [ما هو AEO؟](https://mohammed74a.github.io/aeo-test-site/faq.html#aeo): تعريف AEO وأهميته — ~50 توكن
-- [ما هو ملف llms.txt؟](https://mohammed74a.github.io/aeo-test-site/faq.html#llms): شرح ملف llms.txt وأصله — ~50 توكن
-- [روبوتات الذكاء الاصطناعي](https://mohammed74a.github.io/aeo-test-site/faq.html#bots): GPTBot وClaudeBot وPerplexityBot — ~50 توكن
-- [قابلية القراءة الآلية](https://mohammed74a.github.io/aeo-test-site/faq.html#readability): لماذا HTML النظيف أفضل من JavaScript — ~50 توكن
+### دليل AEO
+- [دليل AEO الشامل](https://mohammed74a.github.io/aeo-test-site/blog/aeo-guide.html): الموجات الثلاث، الأساسات، روبوتات AI، ميزانية التوكنات — ~300 توكن
+
+### دليل llms.txt
+- [دليل llms.txt](https://mohammed74a.github.io/aeo-test-site/blog/llms-txt-guide.html): البنية الصحيحة، أمثلة، أخطاء شائعة — ~250 توكن
+
+### ملفات AEO
+- [llms-full.txt](https://mohammed74a.github.io/aeo-test-site/llms-full.txt): المحتوى الكامل للموقع
+- [robots.txt](https://mohammed74a.github.io/aeo-test-site/robots.txt): سياسة الزحف لـ 11 روبوت AI
+- [sitemap.xml](https://mohammed74a.github.io/aeo-test-site/sitemap.xml): خريطة الموقع
+- [AGENTS.md](https://mohammed74a.github.io/aeo-test-site/AGENTS.md): دليل الوكلاء
+- [agent-permissions.json](https://mohammed74a.github.io/aeo-test-site/agent-permissions.json): إعلان القدرات

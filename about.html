@@ -3,20 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عن الموقع — موقع تجريبي AEO</title>
-  <meta name="description" content="عن الموقع التجريبي لاختبار تحسين محركات الذكاء الاصطناعي.">
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.7; color: #1a1a2e; background: #f8f9fa; }
-    h1 { color: #16213e; border-bottom: 3px solid #0f3460; padding-bottom: 0.5rem; }
-    .card { background: white; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-  </style>
+  <title>عن الموقع — موقع AEO التجريبي</title>
+  <meta name="description" content="عن موقع AEO Lab التجريبي: أهدافه، بنيته، وملفات تحسين محركات الذكاء الاصطناعي.">
+  <link rel="canonical" href="https://mohammed74a.github.io/aeo-test-site/about.html">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema: AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "عن موقع AEO Lab",
+    "url": "https://mohammed74a.github.io/aeo-test-site/about.html",
+    "inLanguage": "ar",
+    "description": "عن موقع AEO Lab التجريبي: أهدافه، بنيته، وملفات تحسين محركات الذكاء الاصطناعي."
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://mohammed74a.github.io/aeo-test-site/"},
+      {"@type": "ListItem", "position": 2, "name": "عن الموقع", "item": "https://mohammed74a.github.io/aeo-test-site/about.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
-  <h1>عن هذا الموقع</h1>
-  <div class="card">
-    <p>هذا موقع تجريبي أُنشئ بتاريخ 2026-09-18 بهدف اختبار تحسين محركات الذكاء الاصطناعي (AEO).</p>
-    <p>الهدف: التحقق من أن الموقع قابل للاكتشاف والقراءة بواسطة روبوتات الذكاء الاصطناعي مثل GPTBot وClaudeBot وPerplexityBot.</p>
-    <p><a href="index.html">← العودة للرئيسية</a></p>
-  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">AEO<span>Lab</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="blog.html">المدونة</a></li>
+        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        <li><a href="about.html" class="active">عن الموقع</a></li>
+        <li><a href="contact.html">تواصل</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">الرئيسية</a> ← عن الموقع
+    </nav>
+
+    <div class="card">
+      <h1 style="color:var(--primary);">عن موقع AEO Lab</h1>
+      <p class="article-meta"><span>📅 أُنشئ: 2026-09-18</span><span class="tag">تجريبي</span></p>
+
+      <h2>🎯 الهدف</h2>
+      <p>موقع تجريبي أُنشئ لاختبار تحسين محركات الذكاء الاصطناعي (AEO): التحقق من أن الموقع قابل للاكتشاف والقراءة بواسطة روبوتات الذكاء الاصطناعي مثل GPTBot وClaudeBot وPerplexityBot.</p>
+
+      <h2>🏗️ البنية</h2>
+      <table>
+        <tr><th>المكوّن</th><th>الوصف</th></tr>
+        <tr><td>HTML ثابت 100%</td><td>بدون JavaScript — قابل للقراءة الآلية بالكامل</td></tr>
+        <tr><td>llms.txt + llms-full.txt</td><td>ملفات اكتشاف الذكاء الاصطناعي</td></tr>
+        <tr><td>robots.txt متقدم</td><td>سياسة وصول لـ 11 روبوت AI</td></tr>
+        <tr><td>Schema JSON-LD</td><td>6 أنواع: WebSite، Organization، FAQPage، Article، Blog، AboutPage، BreadcrumbList</td></tr>
+        <tr><td>ميزانية توكنات</td><td>كل صفحة أقل من 300 توكن</td></tr>
+      </table>
+
+      <h2>📁 ملفات AEO</h2>
+      <ul>
+        <li><a href="llms.txt" style="color:var(--accent);">llms.txt</a> — خريطة الموقع للذكاء الاصطناعي</li>
+        <li><a href="llms-full.txt" style="color:var(--accent);">llms-full.txt</a> — المحتوى الكامل</li>
+        <li><a href="robots.txt" style="color:var(--accent);">robots.txt</a> — سياسة الزحف</li>
+        <li><a href="sitemap.xml" style="color:var(--accent);">sitemap.xml</a> — خريطة الموقع</li>
+        <li><a href="AGENTS.md" style="color:var(--accent);">AGENTS.md</a> — دليل الوكلاء</li>
+        <li><a href="agent-permissions.json" style="color:var(--accent);">agent-permissions.json</a> — إعلان القدرات</li>
+      </ul>
+
+      <p style="margin-top:1.5rem;"><a href="index.html" class="btn btn-outline">← العودة للرئيسية</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>
+        <p><strong>AEO Lab</strong> — موقع تجريبي لاختبار تحسين محركات الذكاء الاصطناعي</p>
+        <p>آخر تحديث: 2026-09-18</p>
+      </div>
+      <div>
+        <p><a href="index.html">الرئيسية</a> • <a href="blog.html">المدونة</a> • <a href="faq.html">الأسئلة الشائعة</a> • <a href="about.html">عن الموقع</a> • <a href="contact.html">تواصل</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
