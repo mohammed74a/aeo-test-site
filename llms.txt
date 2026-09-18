@@ -7,7 +7,13 @@
 - [المدونة](https://mohammed74a.github.io/aeo-test-site/blog.html): 5 مقالات عن تحسين محركات الذكاء الاصطناعي
 - [الأسئلة الشائعة](https://mohammed74a.github.io/aeo-test-site/faq.html): 6 أسئلة شائعة عن AEO وllms.txt وSchema
 - [عن الموقع](https://mohammed74a.github.io/aeo-test-site/about.html): أهداف الموقع وبنيته وملفات AEO
-- [تواصل](https://mohammed74a.github.io/aeo-test-site/contact.html): قنوات التواصل والمستودع
+- [تواصل](https://mohammed74a.github.io/aeo-test-site/contact.html): نموذج رسالة WebMCP + قنوات التواصل والمستودع
+
+## Actions (ما يمكنك تنفيذه فعلياً)
+
+- [إرسال رسالة تواصل](https://mohammed74a.github.io/aeo-test-site/contact.html): نموذج رسالة — الاسم، البريد، الرسالة. WebMCP declarative: data-mcp-action="send-contact-message"
+- [اقتراح تحسين](https://mohammed74a.github.io/aeo-test-site/contact.html#suggest): فتح GitHub Issue معبأ. WebMCP declarative: data-mcp-action="suggest-improvement"
+- [الإجراءات الكاملة](https://mohammed74a.github.io/aeo-test-site/mcp-actions.json): ملف تعريف الإجراءات بصيغة machine-readable
 
 ## Content by Topic
 
@@ -29,4 +35,5 @@
 - [robots.txt](https://mohammed74a.github.io/aeo-test-site/robots.txt): سياسة الزحف لـ 16 روبوت AI
 - [sitemap.xml](https://mohammed74a.github.io/aeo-test-site/sitemap.xml): خريطة الموقع (10 صفحات HTML)
 - [AGENTS.md](https://mohammed74a.github.io/aeo-test-site/AGENTS.md): دليل الوكلاء
-- [agent-permissions.json](https://mohammed74a.github.io/aeo-test-site/agent-permissions.json): إعلان القدرات
+- [agent-permissions.json](https://mohammed74a.github.io/aeo-test-site/agent-permissions.json): إعلان القدرات (قراءة + تنفيذ محدود)
+- [mcp-actions.json](https://mohammed74a.github.io/aeo-test-site/mcp-actions.json): ملف تعريف إجراءات WebMCP

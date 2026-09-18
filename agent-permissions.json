@@ -1,16 +1,34 @@
 {
   "site": "https://mohammed74a.github.io/aeo-test-site/",
-  "version": "1.0",
+  "version": "2.0",
   "last_updated": "2026-09-18",
-  "contact": "owner@example.com",
+  "contact": "contact@example.com",
   "permissions": {
     "read": true,
     "index": true,
     "cite": true,
     "train": true,
-    "execute": false,
+    "execute": true,
     "transact": false
   },
+  "actions": [
+    {
+      "id": "send-contact-message",
+      "name": "إرسال رسالة تواصل",
+      "method": "declarative",
+      "requires_auth": false,
+      "page": "/contact.html",
+      "endpoint": "https://formspree.io/f/YOUR_FORM_ID"
+    },
+    {
+      "id": "suggest-improvement",
+      "name": "اقتراح تحسين",
+      "method": "declarative",
+      "requires_auth": true,
+      "page": "/contact.html",
+      "endpoint": "https://github.com/mohammed74a/aeo-test-site/issues/new"
+    }
+  ],
   "preferred_entrypoint": "/llms.txt",
-  "notes": "Static demo site. No interactive tasks available."
+  "notes": "الموقع يدعم الآن إنجاز مهام محدودة: إرسال رسالة تواصل (بدون مصادقة) واقتراح تحسين (عبر GitHub). لا توجد معاملات مالية. استبدل contact@example.com ببريد حقيقي عند توفره، و YOUR_FORM_ID بمعرّف Formspree حقيقي."
 }

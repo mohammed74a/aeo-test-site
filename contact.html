@@ -4,18 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تواصل معنا — موقع AEO التجريبي</title>
-  <meta name="description" content="تواصل مع موقع AEO Lab التجريبي عبر GitHub أو البريد الإلكتروني.">
+  <meta name="description" content="تواصل مع موقع AEO Lab التجريبي عبر النموذج المعرف بالوكالة (WebMCP) أو GitHub.">
   <link rel="canonical" href="https://mohammed74a.github.io/aeo-test-site/contact.html">
   <link rel="stylesheet" href="style.css">
+  <link rel="mcp-actions" href="mcp-actions.json">
 
-  <!-- Schema: ContactPage -->
+  <!-- Schema: ContactPage + WebForm + ContactPoint -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "تواصل معنا",
     "url": "https://mohammed74a.github.io/aeo-test-site/contact.html",
-    "inLanguage": "ar"
+    "inLanguage": "ar",
+    "mainEntity": {
+      "@type": "WebForm",
+      "name": "نموذج التواصل",
+      "url": "https://mohammed74a.github.io/aeo-test-site/contact.html#contact-form",
+      "description": "نموذج إرسال رسالة تواصل إلى فريق AEO Lab",
+      "action": [
+        { "name": "send-contact-message", "url": "https://mohammed74a.github.io/aeo-test-site/mcp-actions.json" }
+      ],
+      "potentialAction": {
+        "@type": "CommunicateAction",
+        "name": "إرسال رسالة تواصل",
+        "target": "https://mohammed74a.github.io/aeo-test-site/contact.html#send-contact-message"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AEO Lab",
+      "url": "https://mohammed74a.github.io/aeo-test-site/",
+      "email": "contact@example.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@example.com",
+        "url": "https://mohammed74a.github.io/aeo-test-site/contact.html",
+        "availableLanguage": ["ar", "en"]
+      }
+    }
   }
   </script>
 
@@ -33,7 +61,7 @@
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="التنقل الرئيسي">
     <div class="container">
       <a href="index.html" class="logo">AEO<span>Lab</span></a>
       <ul class="nav-links">
@@ -47,29 +75,143 @@
   </nav>
 
   <main class="container">
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="مسار التنقل">
       <a href="index.html">الرئيسية</a> ← تواصل
     </nav>
 
+    <!-- ============ قسم التواصل مع نموذج WebMCP Declarative ============ -->
     <div class="card">
       <h1 style="color:var(--primary);">📬 تواصل معنا</h1>
-      <p>هذا موقع تجريبي — لكن يمكنك التواصل عبر:</p>
+      <p>هذا موقع تجريبي — يمكنك التواصل عبر النموذج، أو GitHub مباشرة:</p>
 
       <div class="grid-2" style="margin-top:1.5rem;">
         <div class="card" style="margin:0;">
           <h3>🐙 GitHub</h3>
           <p>المستودع الكامل للموقع — افتح Issue أو أرسل Pull Request:</p>
-          <p><a href="https://github.com/mohammed74a/aeo-test-site" style="color:var(--accent); font-weight:600;">github.com/mohammed74a/aeo-test-site</a></p>
+          <p><a href="https://github.com/mohammed74a/aeo-test-site" rel="noopener" style="color:var(--accent); font-weight:600;">github.com/mohammed74a/aeo-test-site</a></p>
         </div>
         <div class="card" style="margin:0;">
           <h3>🐛 فتح Issue</h3>
           <p>للاقتراحات والأخطاء — أسرع طريقة للتواصل:</p>
-          <p><a href="https://github.com/mohammed74a/aeo-test-site/issues" style="color:var(--accent); font-weight:600;">github.com/mohammed74a/aeo-test-site/issues</a></p>
+          <p><a href="https://github.com/mohammed74a/aeo-test-site/issues" rel="noopener" style="color:var(--accent); font-weight:600;">github.com/mohammed74a/aeo-test-site/issues</a></p>
         </div>
       </div>
 
-      <h2 style="margin-top:2rem;">💡 اقتراحات للتحسين؟</h2>
-      <p>يمكنك فتح Issue في المستودع أو إرسال Pull Request — الموقع مفتوح المصدر بالكامل.</p>
+      <h2 style="margin-top:2rem;">✉️ أرسل رسالة مباشرة</h2>
+
+      <!--
+        WebMCP Declarative:
+        data-mcp-action       = معرّف الإجراء الفريد
+        data-mcp-description  = وصف طبيعي يفهمه الوكيل (مهم جداً — اكتبه كأنك تخاطب وكيلاً)
+        data-mcp-params       = JSON بالحقول المطلوبة والاختيارية
+        على كل حقل: data-mcp-param + data-mcp-description
+
+        🔧 خطوة إنتاجية قبل الاعتماد: أنشئ حساباً على https://formspree.io
+        واستبدل YOUR_FORM_ID بمعرّف النموذج الحقيقي (المسار: https://formspree.io/f/YOUR_FORM_ID).
+        بدون ذلك يبقى النموذج مكتشفاً للوكلاء لكن الإرسال لن يصل لبريد.
+      -->
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        accept-charset="UTF-8"
+        data-mcp-action="send-contact-message"
+        data-mcp-description="إرسال رسالة تواصل إلى فريق AEO Lab. يرجى تقديم الاسم الكامل والبريد الإلكتروني للرد ووصف الرسالة أو الاقتراح أو الملاحظة."
+        data-mcp-params='{"required": ["name", "email", "message"], "optional": ["subject", "website"]}'
+      >
+        <div style="margin-bottom:1rem;">
+          <label for="contact-name">الاسم الكامل</label>
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            autocomplete="name"
+            required
+            data-mcp-param="name"
+            data-mcp-description="الاسم الكامل للشخص المرسل"
+            aria-required="true"
+            style="width:100%; padding:0.6rem; margin-top:0.3rem;"
+          >
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="contact-email">البريد الإلكتروني</label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            autocomplete="email"
+            inputmode="email"
+            required
+            data-mcp-param="email"
+            data-mcp-description="البريد الإلكتروني للرد على الرسالة"
+            aria-required="true"
+            style="width:100%; padding:0.6rem; margin-top:0.3rem;"
+          >
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="contact-subject">الموضوع (اختياري)</label>
+          <input
+            type="text"
+            id="contact-subject"
+            name="subject"
+            autocomplete="off"
+            data-mcp-param="subject"
+            data-mcp-description="موضوع الرسالة أو الاقتراح"
+            style="width:100%; padding:0.6rem; margin-top:0.3rem;"
+          >
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="contact-website">موقعك/رابطك (اختياري)</label>
+          <input
+            type="url"
+            id="contact-website"
+            name="website"
+            autocomplete="url"
+            inputmode="url"
+            data-mcp-param="website"
+            data-mcp-description="رابط موقعك أو مشروعك إن وجد"
+            style="width:100%; padding:0.6rem; margin-top:0.3rem;"
+          >
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="contact-message">الرسالة</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="5"
+            required
+            data-mcp-param="message"
+            data-mcp-description="نص الرسالة: وصف المشروع أو السؤال أو الاقتراح أو الملاحظة"
+            aria-required="true"
+            style="width:100%; padding:0.6rem; margin-top:0.3rem;"
+          ></textarea>
+        </div>
+
+        <button id="send-contact-message" type="submit" style="padding:0.6rem 1.4rem; cursor:pointer;">إرسال الرسالة</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2 id="suggest" style="margin-top:1rem;">💡 اقتراحات للتحسين؟</h2>
+      <p>افتح Issue معبأ تلقائياً بقالب مقترح، أو أرسل Pull Request:</p>
+
+      <a
+        href="https://github.com/mohammed74a/aeo-test-site/issues/new?title=%5B%A8E0%5D%20%D8%A7%D9%82%D8%AA%D8%B1%D8%A7%D8%AD%20%D8%AA%D8%AD%D8%B3%D9%8A%D9%86&body=%D8%A7%D9%84%D9%85%D9%82%D8%AA%D8%B1%D8%AD:%20%0A%0A%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9:%20%0A%0A%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84:"
+        class="btn"
+        role="button"
+        rel="noopener"
+        data-mcp-action="suggest-improvement"
+        data-mcp-description="فتح اقتراح تحسين لموقع AEO Lab عبر GitHub Issues. المعاملات: العنوان والوصف."
+        data-mcp-params='{"required": ["title"], "optional": ["body"]}'
+      >
+        💡 افتح اقتراح تحسين (معبأ مسبقاً)
+      </a>
+
+      <p style="margin-top:0.8rem;">أو جرّب نموذج الرسالة المباشرة أعلاه — نفس النتيجة دون مغادرة الموقع.</p>
     </div>
 
   </main>

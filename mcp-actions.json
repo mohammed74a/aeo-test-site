@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "site": "https://mohammed74a.github.io/aeo-test-site/",
+  "last_updated": "2026-09-18",
+  "action_discovery": ["declarative"],
+  "actions": [
+    {
+      "id": "send-contact-message",
+      "name": "إرسال رسالة تواصل",
+      "description": "إرسال رسالة تواصل إلى فريق AEO Lab. الحقول: الاسم والبريد الإلكتروني والرسالة.",
+      "method": "declarative",
+      "endpoint": "https://formspree.io/f/YOUR_FORM_ID",
+      "page": "/contact.html",
+      "parameters": {
+        "required": ["name", "email", "message"],
+        "optional": ["subject", "website"]
+      }
+    },
+    {
+      "id": "suggest-improvement",
+      "name": "اقتراح تحسين",
+      "description": "فتح اقتراح تحسين عبر GitHub Issues (يتطلب مصادقة GitHub خارجياً).",
+      "method": "declarative",
+      "endpoint": "https://github.com/mohammed74a/aeo-test-site/issues/new",
+      "page": "/contact.html",
+      "parameters": {
+        "required": ["title"],
+        "optional": ["body"]
+      }
+    }
+  ],
+  "notes": "الوضع declarative هو الأساس. استبدل YOUR_FORM_ID بمعرّف Formspree حقيقي قبل الاعتماد الإنتاجي. الوضع imperative (navigator.mcpActions) غير مفعّل حالياً — متاح في متصفحات Chrome/Edge 2026+."
+}

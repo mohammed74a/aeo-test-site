@@ -54,3 +54,22 @@ Allow: /
 
 # 5) خريطة الموقع
 Sitemap: https://mohammed74a.github.io/aeo-test-site/sitemap.xml
+
+# 6) روبوتات وكيلة ناشئة (صيغة Agent: — مسودة IETF، بعض الوكلاء يستخدمها)
+Agent: anthropic-ai
+Allow: /
+
+Agent: AI2Bot
+Allow: /
+
+Agent: AI2Bot-Dataset
+Allow: /
+
+Agent: FriendlyCrawler
+Allow: /
+
+Agent: Diffbot
+Allow: /
+
+Agent: PerplexityBot
+Allow: /

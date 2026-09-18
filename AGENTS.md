@@ -26,7 +26,7 @@
 | المدونة | `/blog.html` | فهرس 5 مقالات |
 | الأسئلة الشائعة | `/faq.html` | 6 أسئلة (FAQ تفاعلي بدون JS) |
 | عن الموقع | `/about.html` | الأهداف والبنية |
-| تواصل | `/contact.html` | GitHub + Issues |
+| تواصل | `/contact.html` | نموذج WebMCP Declarative + GitHub + Issues |
 | دليل AEO | `/blog/aeo-guide.html` | مقال شامل عن AEO |
 | دليل llms.txt | `/blog/llms-txt-guide.html` | مقال عن llms.txt |
 | AEO مقابل SEO | `/blog/aeo-vs-seo.html` | مقال مقارنة |
@@ -40,12 +40,16 @@
 - `llms-full.txt` — المحتوى الكامل للموقع.
 - `robots.txt` — سياسة الزحف لـ 16 روبوت AI.
 - `sitemap.xml` — خريطة الموقع (10 صفحات HTML فقط).
-- `agent-permissions.json` — إعلان القدرات (قراءة فقط، لا تنفيذ).
+- `agent-permissions.json` — إعلان القدرات (قراءة + تنفيذ محدود مع مهام معلنة).
+- `mcp-actions.json` — ملف تعريف إجراءات WebMCP للاكتشاف الآلي.
 - `logo.svg` — شعار الموقع.
 
 ## قواعد التعديل
 
-1. حافظ على HTML ثابت بدون JavaScript.
+1. حافظ على HTML ثابت للواجهة: كل المحتوى المقروء يظهر بدون JavaScript.
+   أضف سمات WebMCP declarative (data-mcp-*) على النماذج فور إنشائها.
+   الوضع Imperative (navigator.mcpActions) مسموح فقط كتحسين تدريجي في ملف منفصل
+   (mcp-register.js) ولا يجوز أن يحجب المحتوى عند غياب الدعم.
 2. حافظ على ميزانية التوكنات: كل صفحة أقل من 400 توكن.
 3. عند إضافة صفحة: حدّث `llms.txt` و`llms-full.txt` و`sitemap.xml` معاً.
 4. استخدم روابط مطلقة في ملفات AEO (ليست نسبية).

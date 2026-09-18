@@ -9,6 +9,7 @@
   <meta name="author" content="mohammed74a">
   <link rel="canonical" href="https://mohammed74a.github.io/aeo-test-site/">
   <link rel="stylesheet" href="style.css">
+  <link rel="mcp-actions" href="mcp-actions.json">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -49,7 +50,6 @@
     "logo": "https://mohammed74a.github.io/aeo-test-site/logo.svg",
     "description": "مشروع تجريبي لاختبار تحسين محركات الذكاء الاصطناعي",
     "foundingDate": "2026-09-18",
-    "email": "contact@aeo-lab.example",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
@@ -74,7 +74,7 @@
 <body>
 
   <!-- التنقل -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="التنقل الرئيسي">
     <div class="container">
       <a href="index.html" class="logo">AEO<span>Lab</span></a>
       <ul class="nav-links">
@@ -109,17 +109,17 @@
       <div class="card">
         <h3>🔍 قابلية الاكتشاف</h3>
         <p>ملفات <code>llms.txt</code> و<code>robots.txt</code> و<code>sitemap.xml</code> تجعل الموقع مكتشفاً بالكامل لروبوتات الذكاء الاصطناعي.</p>
-        <a href="blog/llms-txt-guide.html" class="btn btn-outline" style="margin-top:0.8rem">اقرأ الدليل</a>
+        <a href="blog/llms-txt-guide.html" class="btn btn-outline" role="button" style="margin-top:0.8rem">اقرأ الدليل</a>
       </div>
       <div class="card">
         <h3>📖 قابلية القراءة</h3>
         <p>HTML دلالي نظيف بدون JavaScript — كل المحتوى يُقرأ مباشرة دون أي معالجة إضافية.</p>
-        <a href="faq.html" class="btn btn-outline" style="margin-top:0.8rem">الأسئلة الشائعة</a>
+        <a href="faq.html" class="btn btn-outline" role="button" style="margin-top:0.8rem">الأسئلة الشائعة</a>
       </div>
       <div class="card">
         <h3>🧠 Schema متقدم</h3>
         <p>بيانات منظمة JSON-LD: WebSite، Organization، FAQPage، Article، BreadcrumbList — للاقتباس الدقيق.</p>
-        <a href="blog/aeo-guide.html" class="btn btn-outline" style="margin-top:0.8rem">دليل AEO</a>
+        <a href="blog/aeo-guide.html" class="btn btn-outline" role="button" style="margin-top:0.8rem">دليل AEO</a>
       </div>
     </div>
 
@@ -127,6 +127,7 @@
     <div class="card">
       <h2>📊 إحصائيات الموقع</h2>
       <table>
+        <caption style="caption-side:bottom;">إحصائيات الموقع</caption>
         <tr><th>المؤشر</th><th>القيمة</th><th>الحالة</th></tr>
         <tr><td>ميزانية التوكنات (كل صفحة)</td><td>&lt; 300 توكن</td><td>✅ ضمن الحد (8,000)</td></tr>
         <tr><td>ملفات AEO منشورة</td><td>7 ملفات</td><td>✅ llms.txt + llms-full.txt + robots.txt + sitemap.xml + AGENTS.md + agent-permissions.json</td></tr>
