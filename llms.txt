@@ -1,10 +1,10 @@
 # AEO Lab — موقع AEO التجريبي
 
-> موقع تجريبي متكامل لاختبار تحسين محركات الذكاء الاصطناعي (AEO): llms.txt، robots.txt، Schema، قابلية القراءة الآلية، وميزانية التوكنات. باللغة العربية.
+> موقع تجريبي متكامل لاختبار تحسين محركات الذكاء الاصطناعي (AEO): llms.txt، robots.txt، Schema، قابلية القراءة الآلية، وميزانية التوكنات. باللغة العربية. آخر تحديث: 2026-09-18.
 
 ## Key Pages
 - [الرئيسية](https://mohammed74a.github.io/aeo-test-site/): نظرة عامة على الموقع ومميزاته وإحصائياته
-- [المدونة](https://mohammed74a.github.io/aeo-test-site/blog.html): مقالات عن تحسين محركات الذكاء الاصطناعي
+- [المدونة](https://mohammed74a.github.io/aeo-test-site/blog.html): 5 مقالات عن تحسين محركات الذكاء الاصطناعي
 - [الأسئلة الشائعة](https://mohammed74a.github.io/aeo-test-site/faq.html): 6 أسئلة شائعة عن AEO وllms.txt وSchema
 - [عن الموقع](https://mohammed74a.github.io/aeo-test-site/about.html): أهداف الموقع وبنيته وملفات AEO
 - [تواصل](https://mohammed74a.github.io/aeo-test-site/contact.html): قنوات التواصل والمستودع
@@ -12,14 +12,21 @@
 ## Content by Topic
 
 ### دليل AEO
-- [دليل AEO الشامل](https://mohammed74a.github.io/aeo-test-site/blog/aeo-guide.html): الموجات الثلاث، الأساسات، روبوتات AI، ميزانية التوكنات — ~300 توكن
+- [دليل AEO الشامل](https://mohammed74a.github.io/aeo-test-site/blog/aeo-guide.html): التعريف، الموجات الثلاث، الأساسات، روبوتات AI، ميزانية التوكنات، خطوات البدء — ~400 توكن
+- [AEO مقابل SEO](https://mohammed74a.github.io/aeo-test-site/blog/aeo-vs-seo.html): جدول مقارنة شامل، نقاط الالتقاء، متى تحتاج كلاً منهما — ~350 توكن
 
 ### دليل llms.txt
-- [دليل llms.txt](https://mohammed74a.github.io/aeo-test-site/blog/llms-txt-guide.html): البنية الصحيحة، أمثلة، أخطاء شائعة — ~250 توكن
+- [دليل llms.txt](https://mohammed74a.github.io/aeo-test-site/blog/llms-txt-guide.html): البنية الصحيحة، أمثلة، أخطاء شائعة، أفضل الممارسات — ~350 توكن
+
+### معجم ومصطلحات
+- [معجم مصطلحات AEO](https://mohammed74a.github.io/aeo-test-site/blog/aeo-glossary.html): عربي-إنجليزي — الملفات، الروبوتات، Schema، مفاهيم متقدمة — ~300 توكن
+
+### حالة دراسية
+- [حالة دراسية: بنيت موقعاً لاختبار AEO](https://mohammed74a.github.io/aeo-test-site/blog/aeo-case-study.html): نتائج موثقة من 47% إلى 87%، الإصلاحات، الدروس — ~350 توكن
 
 ### ملفات AEO
 - [llms-full.txt](https://mohammed74a.github.io/aeo-test-site/llms-full.txt): المحتوى الكامل للموقع
-- [robots.txt](https://mohammed74a.github.io/aeo-test-site/robots.txt): سياسة الزحف لـ 11 روبوت AI
-- [sitemap.xml](https://mohammed74a.github.io/aeo-test-site/sitemap.xml): خريطة الموقع
+- [robots.txt](https://mohammed74a.github.io/aeo-test-site/robots.txt): سياسة الزحف لـ 16 روبوت AI
+- [sitemap.xml](https://mohammed74a.github.io/aeo-test-site/sitemap.xml): خريطة الموقع (10 صفحات HTML)
 - [AGENTS.md](https://mohammed74a.github.io/aeo-test-site/AGENTS.md): دليل الوكلاء
 - [agent-permissions.json](https://mohammed74a.github.io/aeo-test-site/agent-permissions.json): إعلان القدرات
